@@ -13,11 +13,11 @@ ui <- fluidPage(
   
   # App title ----
   titlePanel(
-    h1("Dynamic BeerSheet", style = "font-size:125%;"), windowTitle = "Dynamic-Beersheet"
+    h1("Dynamic BeerSheet"), windowTitle = "Dynamic-Beersheet"
   ),
   
   titlePanel(
-    h5("Author: Sameer Sarkar", style = "font-size:125%;")
+    h5("Author: Sameer Sarkar")
   ),
   
   # Sidebar layout with input and output definitions ----
@@ -31,7 +31,7 @@ ui <- fluidPage(
                  # textOutput("test"),
                  # br(),
                  # br(),
-                 h4("Download Custom BeerSheet Template", style = "font-size:125%;"),
+                 h4("Download Custom BeerSheet Template"),
                  p(style = "font-size:125%;", a(href = "https://www.dropbox.com/s/kqp0y4nmtqcbzel/custom_beersheet_template.xlsx?dl=0",
                      'Click here for Dropbox download link.',
                      target="_blank"), style = "font-size:125%;"),
@@ -54,7 +54,7 @@ ui <- fluidPage(
     mainPanel(position = "right",
               tabsetPanel(
                 tabPanel("Description",
-                         h3("Description", style = "font-size:125%;"),
+                         h3("Description"),
                          p(style = "font-size:125%;", "Welcome to my Dynamic BeerSheet App. Drafting in 
                          Fantasy is a frantic and stressful process. Luckily, there are 
                          lots of great draft kits out there to help us out -
@@ -125,10 +125,10 @@ ui <- fluidPage(
                          br(),
                          p(style = "font-size:125%;", strong("Note:"), "If your screen greys out at any time, 
                            it means the app has crashed or your session has timed out. 
-                           Refresh it and make sure you've followed every step of these instructions. 
-                           If the session has just timed out, all you need to do is refresh and reupload
-                           the Formatted Custom BeerSheet on the left to keep using the app. Nothing further
-                           required to keep using the app after the initial setup.")
+                           Refresh it and make sure you've followed every step of these instructions."),
+                         p(style = "font-size:125%;", "If the session has timed out, all you need to do is refresh and reupload
+                           the Formatted Custom BeerSheet on the side panel to keep using the app. Nothing further
+                           is required to keep using the app after the initial setup.")
                          
                 )
               )
