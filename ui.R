@@ -119,7 +119,11 @@ ui <- fluidPage(
                          p("9) Upload the Formatted Custom BeerSheet using the side panel on the left."),
                          p("10) You're ready to go! Click the \"Update BeerSheet\"
                            button whenever you want to update the Google Sheet
-                           with your draft progress.")
+                           with your draft progress."),
+                         br(),
+                         p(strong("Note:"), "If your screen greys out at any time, 
+                           it means the app has crashed. Refresh it and make sure you've
+                           followed every step of these instructions.")
                          
                 )
               )
