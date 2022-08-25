@@ -7,32 +7,41 @@ library(purrr)
 library(readxl)
 library(shiny)
 library(googlesheets4)
+library(formattable)
+library(DT)
 
 server <- function(input, output) {
-  observeEvent(input$auth, {
-    # gs4_auth(cache = ".secrets", email = TRUE, use_oob = TRUE)
-    # options(gargle_oauth_cache = ".secrets")
-    # 
-    # gs4_auth(cache = ".secrets", email = input$email)
-    # Authenticate using token. If no browser opens, the authentication works.
-    # gs4_auth(email = input$email)
-    # options(
-    #   # gargle_oauth_cache = ".secrets",
-    #   gargle_oauth_email = input$email
-    # )
-    # gs4_auth(token = input$email)
-    output$test <- renderText({
-      list.files(getwd())
-    })
-  })
-  
   bs <- reactive({
     req(input$file1)
-    userinfo <- read_excel(input$file1$datapath, sheet = "metadata")
     bs <- read_excel(input$file1$datapath, sheet = "BeerSheet_csv_updated")
     
     return(bs)
   })
+  
+  qb <- reactive({
+    req(input$file1)
+    df <- read_excel(input$file1$datapath, sheet = "BeerSheet_updated",
+                     range = "B5:J41")
+    
+    return(df)
+  })
+  
+  te <- reactive({
+    req(input$file1)
+    df <- read_excel(input$file1$datapath, sheet = "BeerSheet_updated",
+                     range = "B44:J65")
+    
+    return(df)
+  })
+  
+  rb <- reactive({
+    req(input$file1)
+    df <- read_excel(input$file1$datapath, sheet = "BeerSheet_updated",
+                     range = "M5:V65")
+    
+    return(df)
+  })
+  
   
   userinfo <- reactive({
     req(input$file1)
@@ -71,6 +80,19 @@ server <- function(input, output) {
     bs <- bs() %>%
       mutate(`drafted?` = ifelse(bs()$key %in% dat$key, 1, 0))
     
+    # # Set authentication token to be stored in a folder called `.secrets`
+    # options(gargle_oauth_cache = ".secrets")
+    # 
+    # # Authenticate manually
+    # gs4_auth()
+    # 
+    # # Check that the non-interactive authentication works by first deauthorizing:
+    # gs4_deauth()
+    # 
+    # Authenticate using token. If no browser opens, the authentication works.
+    gs4_auth(cache = ".secrets", email = "statswithsasa@gmail.com")
+    
+    
     
     write_sheet(bs, ss = g_url, sheet = "BeerSheet_csv_updated")
     
@@ -90,8 +112,5 @@ server <- function(input, output) {
       paste0("<b>Last Updated: </b>", Sys.time())
     })
   })
-  
 
-  
-  
 }

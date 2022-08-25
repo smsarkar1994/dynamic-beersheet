@@ -7,7 +7,8 @@ library(purrr)
 library(readxl)
 library(shiny)
 library(googlesheets4)
-
+library(formattable)
+library(DT)
 
 ui <- fluidPage(
   
@@ -21,18 +22,15 @@ ui <- fluidPage(
     
     # Sidebar panel for inputs ----
     sidebarPanel(position = "left",
-                 h4("Authenticate Google Account"),
-                 textInput("email", "Email"),
-                 actionButton("auth", "Authenticate", class = "btn-primary"),
-                 textOutput("test"),
-                 p(a(href = "https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=603366585132-dpeg5tt0et3go5of2374d83ifevk5086.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fspreadsheets%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&flowName=GeneralOAuthFlow",
-                     'Tester',
-                     target="_blank")),
-                 br(),
-                 br(),
+                 # h4("Authenticate Google Account"),
+                 # textInput("email", "Email"),
+                 # actionButton("auth", "Authenticate", class = "btn-primary"),
+                 # textOutput("test"),
+                 # br(),
+                 # br(),
                  h4("Download Custom BeerSheet Template"),
                  p(a(href = "https://www.dropbox.com/s/5umw1xs051ilqxo/custom_beersheet_template.xlsx?dl=0",
-                     'Right click and press "Open Link in Browser" to download.',
+                     'Click here for Dropbox download link.',
                      target="_blank")),
                  br(),
                  h4("Upload File"),
@@ -86,28 +84,21 @@ ui <- fluidPage(
                 tabPanel("Instructions",
                          h3("Instructions"),
                          p("To run this app, follow these instructions:"),
-                         p("1) ", strong("Authenticate your Google Account."), 
-                           "To do this, enter a valid gmail address and press \"Authenticate\".
-                           After signing in,", strong("be sure to check the box that allows
-                                                      for the app to edit your Google Sheets spreadsheets."),
-                           "If you run into errors/the app crashes at any point, it's likely because
-                           you didn't authenticate the right account.", strong("You only need to authenticate once
-                                                                               ever per account.")),
-                         p("  Note: The app will only ever edit the Google Sheet(s) you specify in the input."),
-                         br(),
-                         p("2) Download the", strong("Custom BeerSheets Template"), "from the 
+                         p("1) Download the", strong("Custom BeerSheets Template"), "from the 
                            panel on the left."),
-                         p("3) Go to the ", a(href = "https://footballabsurdity.com/beersheet-request-form/", "BeerSheets site"),
+                         p("2) Go to the ", a(href = "https://footballabsurdity.com/beersheet-request-form/", "BeerSheets site"),
                            "and request a BeerSheet based on your league settings."), 
-                         p("4) Download ", strong("BOTH"), "the .csv and .xlsx files from BeerSheets."),
-                         p('5) Paste the .csv file into the "BeerSheet_csv_raw" tab and the .xlsx file 
+                         p("3) Download ", strong("BOTH"), "the .csv and .xlsx files from BeerSheets."),
+                         p('4) Paste the .csv file into the "BeerSheet_csv_raw" tab and the .xlsx file 
                            into the "Beersheet_xlsx_raw" tab of the template. Take care to', strong("completely overwrite"),
                            "anything in those tabs. I recommend copy and pasting the entire sheet from the source."),
-                         p("6) Navigate to", a(href = "https://drive.google.com/drive/my-drive", "Google Drive"),
-                           "and create a new Google Sheet. Make sure this Google Drive matches
-                           the gmail account you authenticated above."),
-                         p("7) In the new Google Sheet, upload the Formatted Custom BeerSheet by 
-                           navigating to File -> Import -> Upload"),
+                         p("5) Navigate to", a(href = "https://drive.google.com/drive/my-drive", "Google Drive")),
+                         p("6) In the new Google Sheet, upload the Formatted Custom BeerSheet by 
+                           navigating to File -> Import -> Upload and selecting the new excel file."),
+                         p("7) Edit the Google Sheet permissions so anyone can edit it. You can do so by clicking the green \"Share\"
+                           button on the top right -> click \"Save\" -> under \"General Access\", 
+                           change it so \"Anyone with the link\" is an editor", strong("(not just a viewer)."),
+                           "The app WILL NOT work if you don't do this step."),
                          p('8) In the "metadata" tab of the', strong("Excel file (not the Google Sheet)"),
                            "update the 3 fields with a link to your Sleeper draft room, your Sleeper usename, 
                            and a link to the Google Sheet you just created."),
