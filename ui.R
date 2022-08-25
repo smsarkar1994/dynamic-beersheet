@@ -87,7 +87,7 @@ ui <- fluidPage(
                              "throwing me a few bucks", target="_blank"),
                            "to help with server costs."),
                          br(),
-                         p(style = "font-size:125%;", strong("P", tags$sup(style = "font-size:125%;", 3), ".S."),"Shoutout to the great folk(s) at BeerSheets and the awesome
+                         p(style = "font-size:125%;", strong("P", tags$sup(3), ".S."),"Shoutout to the great folk(s) at BeerSheets and the awesome
                            work they do. As well as Sleeper for having a well-documented
                            and easy-to-use API.")
                          
