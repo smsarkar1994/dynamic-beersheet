@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dynamic-beersheet",
+  "private_key_id": "43be955bbe116cec025c51be80967cb900e132fc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCyKDZL51myBAAl\nW+CNnAyABEPpHoqS7NpJwTsp99zCwk8AN5ujqqPwYtmdfTknmHfLQh3hKLk1nv2+\nMU7WUCReLzuZ3RyQoDf6KfghJ7s7h4cyMOQe4ZoIVrlsd3FTcd40FXVVrTFOey2e\n5BkXi7bVpsBe2AH2qgirw5HkrBn8chQhuDcw2DEE8Monh3QHXN+8JaCVD12aRvth\nSnEzf3gCYLNUj3sRbKfV+U/Aurnq1GAOnlZ/hU1HC4ihxdvqoaI3tDOwSs2EcBx8\nCZzYbTSHveKupyDZ6kXtepMVy5LMQkhEsKt6ML+yOJg8hYzz2DRvuJfViC7iZBrj\nWYjqj7tpAgMBAAECggEALMP87LKrr5bgwIJnGL4ax/oKZGPHtyZrrTewGZoN7yQq\n/Kd8ZLImcmssOi3ydBgUFc89uctlSmtyX9187U4C7WWZ6M4N9OtFVYdBMXeNzOX/\nmyV81KOkdC7ydaZHpAuLJXQ04PvdVVaPPosbIPb60JGPaeWGDMhp2FsSaC60cuF9\n5wwgr56w7ZG96wJQ6e5+fTOQeeULwK4nFRRKL9jfUqhqT3ZiGBsLTuLstjxLmgck\nKRm2+5Urnvkq1GxCVNUIYSmmltB/UW0YOImJMScdvUfdydzmLY9KmVWzuHqYbUgi\nHAA8PVtpGuSjLe4aHbNlNVAPNpUeEn9t9SCBnIRjrwKBgQDggwkPoV/jDtUiqXXg\nkZ+iUdwig3CJUUg9VT9OOn5RZ3ku0BPKpc/oSo7eFjU6DKcCFVoUuyBQC/F9RP7m\nP/Fu38Fa2Kwjq6OKOHMfVWm0MwBcYyoRXcrelGF1shK2kE5RY5BV0q2jyF0bIN/P\n4jwfN0gYKQRTekM4+KhSAo82UwKBgQDLJNYB75FrASyJhCysajCtH8KDdr7N+lHE\nrHhXbgQ/4c4P2y3Nz1Ad3qDyKjrZ6We/DaQsSzh4f7NkFKqvidGg4kBIza9HozzN\nQBoDABkSnksjQcj4SI7NX3uUs1W58yytUo72W3m2Uy8Zuwip0YOpcjgLOeAab29X\nusHmLzmX0wKBgQCH/bcyWYxsS6K8gSseoPax6qXN3hH/i1WXmRhkeTfkdSnJOk6S\ntEcwLGFHkuogxGMw9t/+qK5U7jcTqwQ/UcIbZ7uGHLKAVMoVwkWxWBpUBYSVcZec\nt1RX6Eb0dK2zGcvmrslRwvBcwdPrx8jp8d57BhBMWiP9sJQhYTULn/NBcwKBgCha\nBtCXn9EbiJdAVAdjiIu7FU471ibgJEHm6Hild96goefwZ6bMGWP1hw7TaKFEhcEj\nmorZ3jvBUgb9O/Jmc+d7Sb2sbbbTLA6xPvl9mX1jSBWWya7X6tXMs6WUAeFP9n3v\nOkqhXQnkeCSqTEw/O+H6uDsyodtea0WH6WAp3UzVAoGAT2aaRRCeDnzdX2uHJTx3\nRq2/fnjrt4osjNZJkx8bW+d41D4LF7KAnrmrFIyi03LGYdHQIbI0BTHdxd1g2aWp\ncHr0FqxXDoEKSq5OJFy8Y6BlRzsRHBF5QEoSTVPX0jOQkhFCI/w5R+E7qfPdK3qF\npzfY0LNpHNKD2q8dHtCjD1c=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dynamic-beersheets@dynamic-beersheet.iam.gserviceaccount.com",
+  "client_id": "113150620483984853135",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dynamic-beersheets%40dynamic-beersheet.iam.gserviceaccount.com"
+}

@@ -10,9 +10,19 @@ library(googlesheets4)
 
 server <- function(input, output) {
   observeEvent(input$auth, {
+    # gs4_auth(cache = ".secrets", email = TRUE, use_oob = TRUE)
+    # options(gargle_oauth_cache = ".secrets")
+    # 
+    # gs4_auth(cache = ".secrets", email = input$email)
+    # Authenticate using token. If no browser opens, the authentication works.
     # gs4_auth(email = input$email)
+    # options(
+    #   # gargle_oauth_cache = ".secrets",
+    #   gargle_oauth_email = input$email
+    # )
+    # gs4_auth(token = input$email)
     output$test <- renderText({
-      input$email
+      list.files(getwd())
     })
   })
   
