@@ -13,7 +13,11 @@ ui <- fluidPage(
   
   # App title ----
   titlePanel(
-    h1("Dynamic BeerSheet"),
+    h1("Dynamic BeerSheet"), windowTitle = "Dynamic-Beersheet"
+  ),
+  
+  titlePanel(
+    h5("Author: Sameer Sarkar")
   ),
   
   # Sidebar layout with input and output definitions ----
@@ -28,7 +32,7 @@ ui <- fluidPage(
                  # br(),
                  # br(),
                  h4("Download Custom BeerSheet Template"),
-                 p(a(href = "https://www.dropbox.com/s/5umw1xs051ilqxo/custom_beersheet_template.xlsx?dl=0",
+                 p(a(href = "https://www.dropbox.com/s/kqp0y4nmtqcbzel/custom_beersheet_template.xlsx?dl=0",
                      'Click here for Dropbox download link.',
                      target="_blank")),
                  br(),
@@ -73,7 +77,17 @@ ui <- fluidPage(
                            Google Sheet)."),
                          p("2) Microsoft Excel."),
                          br(), 
-                         p("Shoutout to the great folk(s) at BeerSheets and the awesome
+                         p(strong("P.S."), "If you like this app, feel free to check out", 
+                           a(href = "https://www.statswithsasa.com", 
+                             'my blog', target="_blank"), "for other cool things. 
+                           I write about everything ranging from sports to current events."),
+                         p(strong("P.P.S."), "I'm hosting this app using a service that provides limited
+                           free bandwidth. If you liked using this app, please consider",
+                           a(href = "https://www.buymeacoffee.com/statswithsasa", 
+                             "throwing me a few bucks"),
+                           "to help with server costs."),
+                         br(),
+                         p(strong("P", tags$sup(3), ".S."),"Shoutout to the great folk(s) at BeerSheets and the awesome
                            work they do. As well as Sleeper for having a well-documented
                            and easy-to-use API.")
                          
@@ -91,17 +105,19 @@ ui <- fluidPage(
                          p('4) Paste the .csv file into the "BeerSheet_csv_raw" tab and the .xlsx file 
                            into the "Beersheet_xlsx_raw" tab of the template. Take care to', strong("completely overwrite"),
                            "anything in those tabs. I recommend copy and pasting the entire sheet from the source."),
-                         p("5) Navigate to", a(href = "https://drive.google.com/drive/my-drive", "Google Drive")),
+                         p("5) Navigate to", a(href = "https://drive.google.com/drive/my-drive", "Google Drive"),
+                           "and create a new Google Sheet."),
                          p("6) In the new Google Sheet, upload the Formatted Custom BeerSheet by 
-                           navigating to File -> Import -> Upload and selecting the new excel file."),
+                           navigating to File -> Import -> Upload and selecting the formatted custom excel file."),
                          p("7) Edit the Google Sheet permissions so anyone can edit it. You can do so by clicking the green \"Share\"
-                           button on the top right -> click \"Save\" -> under \"General Access\", 
+                           button on the top right -> click \"save\" -> under \"General Access\", 
                            change it so \"Anyone with the link\" is an editor", strong("(not just a viewer)."),
                            "The app WILL NOT work if you don't do this step."),
                          p('8) In the "metadata" tab of the', strong("Excel file (not the Google Sheet)"),
                            "update the 3 fields with a link to your Sleeper draft room, your Sleeper usename, 
                            and a link to the Google Sheet you just created."),
-                         p("9) You're ready to go! Click the \"Update BeerSheet\"
+                         p("9) Upload the Formatted Custom BeerSheet using the side panel on the left."),
+                         p("10) You're ready to go! Click the \"Update BeerSheet\"
                            button whenever you want to update the Google Sheet
                            with your draft progress.")
                          
