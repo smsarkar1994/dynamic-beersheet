@@ -54,7 +54,7 @@ ui <- fluidPage(
     mainPanel(position = "right",
               tabsetPanel(
                 tabPanel("Description",
-                         h3("Description"),
+                         h2("Description"),
                          p(style = "font-size:125%;", "Welcome to my Dynamic BeerSheet App. Drafting in 
                          Fantasy is a frantic and stressful process. Luckily, there are 
                          lots of great draft kits out there to help us out -
@@ -95,7 +95,7 @@ ui <- fluidPage(
                 
                 
                 tabPanel("Instructions",
-                         h3("Instructions"),
+                         h2("Instructions"),
                          p(style = "font-size:125%;", "To run this app, follow these instructions:"),
                          p(style = "font-size:125%;", "1) Download the", strong("Custom BeerSheets Template"), "from the 
                            panel on the left."),
