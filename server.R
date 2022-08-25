@@ -79,13 +79,7 @@ server <- function(input, output) {
     })
   })
   
-  
-  
-  # output$contents <- renderTable({
-  # 
-  # })
-  
+
   
   
 }
-shinyApp(ui = ui, server = server)
