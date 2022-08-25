@@ -10,8 +10,10 @@ library(googlesheets4)
 
 server <- function(input, output) {
   observeEvent(input$auth, {
-    gs4_auth(email = input$email)
-    
+    # gs4_auth(email = input$email)
+    output$test <- renderText({
+      input$email
+    })
   })
   
   bs <- reactive({
