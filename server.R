@@ -74,7 +74,8 @@ server <- function(input, output) {
     dat <- left_join(m1, m2, by = "player_id")
     
     dat <- dat %>%
-      mutate(key = paste0(first_name, " ", last_name, team))
+      mutate(key = paste0(first_name, " ", last_name, team),
+             key = gsub("\\.|\\'", "", key))
     
     bs <- bs() %>%
       mutate(`drafted?` = ifelse(bs()$key %in% dat$key, 1, 0))
