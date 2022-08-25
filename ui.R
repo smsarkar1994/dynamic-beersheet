@@ -1,4 +1,4 @@
-library(tidyverse)
+library(dplyr)
 library(rvest)
 library(httr)
 library(jsonlite)
