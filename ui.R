@@ -124,7 +124,7 @@ ui <- fluidPage(
                            was last updated will display on the sidepanel."),
                          br(),
                          p(style = "font-size:125%;", strong("Note:"), "If your screen greys out at any time, 
-                           it means the app has crashed or your session has timed out. 
+                           it means the app has crashed or your session has timed out due to inactivity. 
                            Refresh it and make sure you've followed every step of these instructions."),
                          p(style = "font-size:125%;", "If the session has timed out, all you need to do is refresh and reupload
                            the Formatted Custom BeerSheet on the side panel to keep using the app. Nothing further
