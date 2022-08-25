@@ -28,7 +28,7 @@ ui <- fluidPage(
                  # h4("Authenticate Google Account"),
                  # textInput("email", "Email"),
                  # actionButton("auth", "Authenticate", class = "btn-primary"),
-                 textOutput("test"),
+                 # textOutput("test"),
                  # br(),
                  # br(),
                  h4("Download Custom BeerSheet Template"),

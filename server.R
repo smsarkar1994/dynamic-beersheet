@@ -11,6 +11,10 @@ library(stringr)
 
 
 server <- function(input, output) {
+  start_time = Sys.time()
+
+  
+
   bs <- reactive({
     req(input$file1)
     bs <- read_excel(input$file1$datapath, sheet = "BeerSheet_csv_updated")
@@ -91,5 +95,20 @@ server <- function(input, output) {
       paste0("<b>Last Updated: </b>", Sys.time())
     })
   })
+  
+  autoInvalidate <- reactiveTimer(15000)
+  observe({
+    autoInvalidate()
+    if(Sys.time() <= start_time + 5*60) {
+      cat(".")
+      # output$test <- renderText(start_time)
+    }
 
+  })
+  
+  observe({
+    autoInvalidate()
+
+  })
+  
 }
