@@ -7,8 +7,7 @@ library(purrr)
 library(readxl)
 library(shiny)
 library(googlesheets4)
-library(formattable)
-library(DT)
+
 
 server <- function(input, output) {
   bs <- reactive({
