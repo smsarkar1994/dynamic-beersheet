@@ -52,7 +52,7 @@ ui <- fluidPage(
                  # br(),
                  # br(),
                  h4("Download Custom BeerSheet Template"),
-                 p(style = "font-size:125%;", a(href = "https://www.dropbox.com/s/kqp0y4nmtqcbzel/custom_beersheet_template.xlsx?dl=0",
+                 p(style = "font-size:125%;", a(href = "https://www.dropbox.com/s/3nkmmyl62avxfs8/custom_beersheet_template.xlsx?dl=0",
                      'Click here for Dropbox download link.',
                      target="_blank"), style = "font-size:125%;"),
                  br(),
@@ -84,7 +84,7 @@ ui <- fluidPage(
                            the stress of the draft and update your BeerSheets
                            as players are being taken off the board. This is especially
                            hard if you have tight draft windows (<30s) or do in-person
-                           drafts where you can be distracted by the antics of your leaguemates"),
+                           drafts where you can be distracted by the antics of your leaguemates."),
                          p(style = "font-size:125%;margin-top:1%", "Enter my", strong("Dynamic BeerSheets App."), "This app is designed to 
                            integrate with your draft and", strong("dynamically update your BeerSheet 
                                                                    to show who's been drafted and who's still left.")),
@@ -131,7 +131,14 @@ ui <- fluidPage(
                                      If the authentication process succeeds", strong("DO NOT CLICK THIS BUTTON AGAIN or the app will crash.")),
                              tags$li(style = "font-size:125%;", "Enter your League ID. To find this, navigate to your League homepage -
                                      the League ID is the number after \"https://football.fantasysports.yahoo.com/f1/\".",
-                                     a(href = "https://imgur.com/a/WkwpOfT", "It should look like this.", target="_blank"))
+                                     a(href = "https://imgur.com/a/WkwpOfT", "It should look like this.", target="_blank")),
+                             tags$li(style = "font-size:125%;", strong("Note:"), "You can now test if the app works with your Yahoo league
+                                     prior to your draft. Just follow these instructions, and if your draft hasn't started yet
+                                     but the app worked, a message will display saying \"Yahoo test successful!\"
+                                     The metadata tab in your Google Sheet will also update indicating that the test succeeded.
+                                     Please see", 
+                                     a(href = "https://www.youtube.com/watch?v=OkhK7GekFMU", "this video", target="_blank"),
+                                     "for an example of how the app will work for a Yahoo league.")
                            ),
                            br(),
                            tags$li(style = "font-size:125%", "Download the", strong("Custom BeerSheets Template"), "from the 
